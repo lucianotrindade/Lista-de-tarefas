@@ -1,6 +1,7 @@
 > # Lista de Tarefas :memo: 
 
-## [![NPM](https://img.shields.io/npm/l/react)](https://github.com/lucianotrindade/Lista-de-tarefas/blob/main/LICENSE)
+![GitHub](https://img.shields.io/github/license/lucianotrindade/Lista-de-tarefas)
+![GitHub repo size](https://img.shields.io/github/repo-size/lucianotrindade/Lista-de-tarefas)
 
 > ## :pushpin: Descrição do projeto:
 
