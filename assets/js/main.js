@@ -43,6 +43,8 @@ function incluirTarefas(tarefa){
     tarefas.appendChild(lis);
     lis.appendChild(botao);
     //lis.appendChild(realizado); 
+
+    contadorDeTarefas();
 }
 
 // Aqui limpa o input e faz um focus para digitar.
@@ -52,10 +54,9 @@ function limparInput(){
    
 }
 
-function contadorDeTarefas () {
-  if(!input.value) return;  
-        qtd++;
-    
+function contadorDeTarefas (i) {
+   qtd++;
+     
 }
 
 function incluirQuantidadeTarefas () {
@@ -66,11 +67,13 @@ function incluirQuantidadeTarefas () {
 // Pegando o envendo do botão incluir e parando o evento de atualizar a pagina.
 button.addEventListener('click', function(e){
 e.preventDefault();
+ 
   if(!input.value) return;
-  
+ 
   incluirTarefas(input.value);
   limparInput();
-  contadorDeTarefas();
+  
+
   incluirQuantidadeTarefas ();
 });
 
