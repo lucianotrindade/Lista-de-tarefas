@@ -53,8 +53,8 @@ function limparInput(){
 }
 
 function contadorDeTarefas () {
-         
-  qtd++;
+  if(!input.value) return;  
+        qtd++;
     
 }
 
