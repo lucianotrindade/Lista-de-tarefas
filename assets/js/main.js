@@ -32,13 +32,14 @@ function excluirTarefa(){
 
 // Função que inclui as tarefas.
 function incluirTarefas(tarefa){
+    if(tarefa === ' ') return; 
     const lis = criaLi();
     lis.innerText = tarefa;
        
     const botao = excluirTarefa(lis);
 
     //const realizado = tarefaRealizada();
-       
+      
     tarefas.appendChild(lis);
     lis.appendChild(botao);
     //lis.appendChild(realizado); 
@@ -48,10 +49,13 @@ function incluirTarefas(tarefa){
 function limparInput(){
     input.value = ' ';
     input.focus();
+   
 }
 
 function contadorDeTarefas () {
-   qtd++;
+         
+  qtd++;
+    
 }
 
 function incluirQuantidadeTarefas () {
@@ -63,12 +67,11 @@ function incluirQuantidadeTarefas () {
 button.addEventListener('click', function(e){
 e.preventDefault();
   if(!input.value) return;
- 
+  
   incluirTarefas(input.value);
   limparInput();
   contadorDeTarefas();
   incluirQuantidadeTarefas ();
-
 });
 
 document.addEventListener('click', function(e){
